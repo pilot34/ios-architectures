@@ -173,10 +173,10 @@
 			isa = PBXGroup;
 			children = (
 				F74E755B211B99CE0096EED3 /* Info.plist */,
-				F74E757E211BA0030096EED3 /* SearchServiceTests.swift */,
 				F74E7580211BA0290096EED3 /* places.json */,
 				F74E7582211BA0990096EED3 /* MockAPIClient.swift */,
 				F7D5861D21446CFA007F7ABD /* MockSearchService.swift */,
+				F74E757E211BA0030096EED3 /* SearchServiceTests.swift */,
 				F718FA5E2141F46F002B911D /* SearchViewModelTests.swift */,
 				F7D5861F21446F1E007F7ABD /* TestScheduler+Extensions.swift */,
 			);
