@@ -14,22 +14,15 @@ import RxCocoa
 
 class SearchServiceTests: XCTestCase {
 
-    private let scheduler = TestScheduler(initialClock: 0, simulateProcessingDelay: true)
-    private let disposeBag = DisposeBag()
-
     func testParsing() {
+        let scheduler = TestScheduler()
         let client = MockAPIClient(file: "places")
         let service = SearchService(client: client)
-        let observer = scheduler.createObserver([Place].self)
 
-        service.search(query: "blabla")
-            .asObservable()
-            .subscribe(observer)
-            .disposed(by: self.disposeBag)
-
+        let search = scheduler.record(service.search(query: "blabla"))
         scheduler.start()
-        XCTAssertEqual(2, observer.events.count)
-        let places = observer.events.first?.value.element
+        XCTAssertEqual(2, search.events.count)
+        let places = search.events.first?.value.element
         XCTAssertNotNil(places)
         XCTAssertTrue(places?.count ?? 0 > 0)
 

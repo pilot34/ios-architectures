@@ -27,6 +27,8 @@
 		F74E7585211BAD8E0096EED3 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74E7584211BAD8E0096EED3 /* SearchViewModel.swift */; };
 		F7BD139C213F3AE100C3144B /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BD139B213F3AE100C3144B /* Dependencies.swift */; };
 		F7BD139E213F3B7C00C3144B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BD139D213F3B7C00C3144B /* Constants.swift */; };
+		F7D5861E21446CFA007F7ABD /* MockSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D5861D21446CFA007F7ABD /* MockSearchService.swift */; };
+		F7D5862021446F1E007F7ABD /* TestScheduler+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D5861F21446F1E007F7ABD /* TestScheduler+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		F74E7584211BAD8E0096EED3 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		F7BD139B213F3AE100C3144B /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 		F7BD139D213F3B7C00C3144B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F7D5861D21446CFA007F7ABD /* MockSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchService.swift; sourceTree = "<group>"; };
+		F7D5861F21446F1E007F7ABD /* TestScheduler+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestScheduler+Extensions.swift"; sourceTree = "<group>"; };
 		F8E21AAEA368397E81D1B418 /* Pods-MVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM/Pods-MVVM.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -172,7 +176,9 @@
 				F74E757E211BA0030096EED3 /* SearchServiceTests.swift */,
 				F74E7580211BA0290096EED3 /* places.json */,
 				F74E7582211BA0990096EED3 /* MockAPIClient.swift */,
+				F7D5861D21446CFA007F7ABD /* MockSearchService.swift */,
 				F718FA5E2141F46F002B911D /* SearchViewModelTests.swift */,
+				F7D5861F21446F1E007F7ABD /* TestScheduler+Extensions.swift */,
 			);
 			path = MVVMTests;
 			sourceTree = "<group>";
@@ -399,6 +405,8 @@
 				F74E757F211BA0030096EED3 /* SearchServiceTests.swift in Sources */,
 				F74E7583211BA0990096EED3 /* MockAPIClient.swift in Sources */,
 				F718FA5F2141F46F002B911D /* SearchViewModelTests.swift in Sources */,
+				F7D5862021446F1E007F7ABD /* TestScheduler+Extensions.swift in Sources */,
+				F7D5861E21446CFA007F7ABD /* MockSearchService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

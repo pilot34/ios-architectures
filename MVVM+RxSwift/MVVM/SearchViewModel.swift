@@ -17,7 +17,7 @@ struct SearchCellViewModel {
 
     init(place: Place, didSelect: @escaping () -> Void) {
         title = place.displayName
-        subtitle = "\(place.lat) - \(place.lon)"
+        subtitle = "\(place.lat), \(place.lon)"
         self.didSelect = didSelect
     }
 }
@@ -60,7 +60,7 @@ class SearchViewModel {
         }
     }
 
-    private let service: SearchService
+    private let service: SearchServiceProtocol
     private let disposeBag = DisposeBag()
 
     var title: String {
@@ -100,7 +100,7 @@ class SearchViewModel {
             .filterNil()
     }
 
-    init(service: SearchService) {
+    init(service: SearchServiceProtocol) {
         self.service = service
     }
 
@@ -110,7 +110,7 @@ class SearchViewModel {
 
         let places = input
             .asObservable()
-            .throttle(0.3, latest: true, scheduler: MainScheduler.instance)
+//            .throttle(0.3, latest: true, scheduler: MainScheduler.instance)
             .filterNil()
             .map {
                 innerData.accept(.loading)
