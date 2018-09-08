@@ -9,7 +9,9 @@
 import UIKit
 
 extension UIStoryboard {
+    // swiftlint:disable force_cast
     func instantiate<T: UIViewController>(type: T.Type) -> T {
         return instantiateViewController(withIdentifier: String(describing: type)) as! T
     }
+    // swiftlint:enable force_cast
 }

@@ -54,8 +54,8 @@ class SearchViewController: UIViewController {
             .drive(tableView.rx.isHidden)
             .disposed(by: disposeBag)
 
-
-        viewModel.cells.bind(to: tableView.rx.items(cellIdentifier: "SearchCell", cellType: SearchCell.self)) { _, element, cell in
+        viewModel.cells.bind(to: tableView.rx
+            .items(cellIdentifier: "SearchCell", cellType: SearchCell.self)) { _, element, cell in
             cell.display(viewModel: element)
         }.disposed(by: disposeBag)
     }
@@ -64,4 +64,3 @@ class SearchViewController: UIViewController {
         searchBar.resignFirstResponder()
     }
 }
-

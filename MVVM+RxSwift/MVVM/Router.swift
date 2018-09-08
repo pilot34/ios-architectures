@@ -8,9 +8,7 @@
 
 import UIKit
 
-
 class Router {
-
     private let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
     private let dependencies = Dependencies()
 
@@ -21,6 +19,4 @@ class Router {
         let nav = UINavigationController(rootViewController: vc)
         return nav
     }
-
-
 }
