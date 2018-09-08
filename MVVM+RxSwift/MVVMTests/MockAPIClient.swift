@@ -26,4 +26,6 @@ class MockAPIClient: APIClientProtocol {
                      parameters: [String: CustomStringConvertible]) -> Single<Data> {
         return Single.just(data)
     }
+
+    let backgroundScheduler: SchedulerType = SharingScheduler.make()
 }

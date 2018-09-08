@@ -15,6 +15,7 @@ enum RequestMethod {
 }
 
 protocol APIClientProtocol {
+    var backgroundScheduler: SchedulerType { get }
     func requestData(method: RequestMethod,
                      path: String,
                      parameters: [String: CustomStringConvertible]) -> Single<Data>
@@ -48,20 +49,21 @@ class APIClient: APIClientProtocol {
     init(baseURL: URL) {
         self.baseURL = baseURL
     }
+
+    let backgroundScheduler: SchedulerType = ConcurrentDispatchQueueScheduler(qos: .background)
 }
 
 extension APIClientProtocol {
     func request<T: Decodable>(method: RequestMethod,
                                path: String,
                                parameters: [String: CustomStringConvertible]) -> Single<T> {
-        let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
         return requestData(method: method,
                            path: path,
                            parameters: parameters)
             .map {
                 do {
-                    // TODO: move parsing to background thread
+                    let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
                     let result = try decoder.decode(T.self, from: $0)
                     return result
                 } catch let e {
@@ -69,5 +71,7 @@ extension APIClientProtocol {
                     throw e
                 }
             }
+            .subscribeOn(backgroundScheduler)
+            .observeOn(SharingScheduler.make())
     }
 }
