@@ -14,8 +14,6 @@
 		F77FAEF32145950C00F39E38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F77FAEF22145950C00F39E38 /* Assets.xcassets */; };
 		F77FAEF62145950C00F39E38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F77FAEF42145950C00F39E38 /* LaunchScreen.storyboard */; };
 		F77FAF0C2145950C00F39E38 /* MVPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77FAF0B2145950C00F39E38 /* MVPUITests.swift */; };
-		F77FAF2A21459D5F00F39E38 /* places.json in Resources */ = {isa = PBXBuildFile; fileRef = F77FAF2921459D5F00F39E38 /* places.json */; };
-		F77FAF2C21459E1500F39E38 /* UIStoryboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77FAF2B21459E1500F39E38 /* UIStoryboard+Extensions.swift */; };
 		F77FAF3021459E5600F39E38 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77FAF2D21459E5600F39E38 /* Router.swift */; };
 		F77FAF3521459F2C00F39E38 /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77FAF3321459F2C00F39E38 /* MockAPIClient.swift */; };
 		F77FAF3621459F2C00F39E38 /* SearchServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77FAF3421459F2C00F39E38 /* SearchServiceTests.swift */; };
@@ -30,6 +28,8 @@
 		F7F5F8422151A4B10040366D /* SearchPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F5F8412151A4B10040366D /* SearchPresenterTests.swift */; };
 		F7F5F8442151A4B90040366D /* MockSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F5F8432151A4B90040366D /* MockSearchViewController.swift */; };
 		F7F5F8462151A5410040366D /* MockSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F5F8452151A5410040366D /* MockSearchService.swift */; };
+		F7F5F8482151B0F00040366D /* places.json in Resources */ = {isa = PBXBuildFile; fileRef = F7F5F8472151B0F00040366D /* places.json */; };
+		F7F5F84A2151B1040040366D /* UIStoryboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F5F8492151B1040040366D /* UIStoryboard+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,8 +67,6 @@
 		F77FAF072145950C00F39E38 /* MVPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F77FAF0B2145950C00F39E38 /* MVPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPUITests.swift; sourceTree = "<group>"; };
 		F77FAF0D2145950C00F39E38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F77FAF2921459D5F00F39E38 /* places.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = places.json; path = "../../MVVM+RxSwift/MVVMTests/places.json"; sourceTree = "<group>"; };
-		F77FAF2B21459E1500F39E38 /* UIStoryboard+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIStoryboard+Extensions.swift"; path = "../../../MVVM+RxSwift/MVVM/Extensions/UIStoryboard+Extensions.swift"; sourceTree = "<group>"; };
 		F77FAF2D21459E5600F39E38 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		F77FAF3321459F2C00F39E38 /* MockAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
 		F77FAF3421459F2C00F39E38 /* SearchServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchServiceTests.swift; sourceTree = "<group>"; };
@@ -83,6 +81,8 @@
 		F7F5F8412151A4B10040366D /* SearchPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenterTests.swift; sourceTree = "<group>"; };
 		F7F5F8432151A4B90040366D /* MockSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchViewController.swift; sourceTree = "<group>"; };
 		F7F5F8452151A5410040366D /* MockSearchService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockSearchService.swift; sourceTree = "<group>"; };
+		F7F5F8472151B0F00040366D /* places.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = places.json; sourceTree = "<group>"; };
+		F7F5F8492151B1040040366D /* UIStoryboard+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,10 +173,10 @@
 		F77FAEFF2145950C00F39E38 /* MVPTests */ = {
 			isa = PBXGroup;
 			children = (
+				F7F5F8472151B0F00040366D /* places.json */,
 				F77FAF3321459F2C00F39E38 /* MockAPIClient.swift */,
 				F7F5F8452151A5410040366D /* MockSearchService.swift */,
 				F77FAF3421459F2C00F39E38 /* SearchServiceTests.swift */,
-				F77FAF2921459D5F00F39E38 /* places.json */,
 				F77FAF022145950C00F39E38 /* Info.plist */,
 				F7F5F8412151A4B10040366D /* SearchPresenterTests.swift */,
 				F7F5F8432151A4B90040366D /* MockSearchViewController.swift */,
@@ -208,8 +208,8 @@
 			isa = PBXGroup;
 			children = (
 				F7F5F83D21519ADE0040366D /* TableDataSource.swift */,
-				F77FAF2B21459E1500F39E38 /* UIStoryboard+Extensions.swift */,
 				F7F5F83F2151A08F0040366D /* Throttler.swift */,
+				F7F5F8492151B1040040366D /* UIStoryboard+Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -340,7 +340,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F77FAF2A21459D5F00F39E38 /* places.json in Resources */,
+				F7F5F8482151B0F00040366D /* places.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,8 +424,8 @@
 				F77FAF4221459F6A00F39E38 /* SearchPresenter.swift in Sources */,
 				F7F5F8402151A08F0040366D /* Throttler.swift in Sources */,
 				F7F5F83E21519ADE0040366D /* TableDataSource.swift in Sources */,
+				F7F5F84A2151B1040040366D /* UIStoryboard+Extensions.swift in Sources */,
 				F77FAEEC2145950B00F39E38 /* AppDelegate.swift in Sources */,
-				F77FAF2C21459E1500F39E38 /* UIStoryboard+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
