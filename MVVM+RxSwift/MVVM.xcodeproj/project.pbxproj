@@ -155,16 +155,15 @@
 		F74E7543211B99CC0096EED3 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				F77FAF4521459FAA00F39E38 /* Search */,
 				F74E757B211B9BDD0096EED3 /* Model */,
 				F74E7574211B9ACA0096EED3 /* Extensions */,
 				F74E7544211B99CC0096EED3 /* AppDelegate.swift */,
-				F74E7546211B99CC0096EED3 /* SearchViewController.swift */,
 				F74E7572211B9A7B0096EED3 /* Router.swift */,
 				F74E7548211B99CC0096EED3 /* Main.storyboard */,
 				F74E754B211B99CD0096EED3 /* Assets.xcassets */,
 				F74E754D211B99CD0096EED3 /* LaunchScreen.storyboard */,
 				F74E7550211B99CD0096EED3 /* Info.plist */,
-				F74E7584211BAD8E0096EED3 /* SearchViewModel.swift */,
 			);
 			path = MVVM;
 			sourceTree = "<group>";
@@ -210,6 +209,15 @@
 				F7BD139D213F3B7C00C3144B /* Constants.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F77FAF4521459FAA00F39E38 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				F74E7546211B99CC0096EED3 /* SearchViewController.swift */,
+				F74E7584211BAD8E0096EED3 /* SearchViewModel.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
