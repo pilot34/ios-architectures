@@ -28,7 +28,7 @@ class SearchPresenter: SearchPresenterProtocol {
         case error(String)
         case rows([SearchCellViewModel])
 
-        static func ==(lhs: State, rhs: State) -> Bool {
+        static func == (lhs: State, rhs: State) -> Bool {
             switch (lhs, rhs) {
             case (.loading, .loading):
                 return true
